@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontend",
+            "outputPath": "../matilde-backend/public",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/vendor/bootstrap4/css/bootstrap.min.css",
+              "src/assets/css/master.css",
+              "src/assets/vendor/chartsjs/Chart.min.css",
+              "src/assets/vendor/flagiconcss3/css/flag-icon.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendor/jquery3/jquery.min.js",
+              "src/assets/vendor/bootstrap4/js/bootstrap.bundle.min.js",
+              "src/assets/vendor/fontawesome5/js/solid.min.js",
+              "src/assets/vendor/fontawesome5/js/fontawesome.min.js",
+              "src/assets/vendor/chartsjs/Chart.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,7 +72,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "frontend:build"
+            "browserTarget": "frontend:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -119,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontend"
+    }
+  },
+  "defaultProject": "frontend",
+  "cli": {
+    "analytics": "8d018351-c011-47f0-85b3-0ba7ed0300f9"
+  }
 }
