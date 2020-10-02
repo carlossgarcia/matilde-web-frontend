@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
+import { Err404Component } from './pages/error/err404/err404.component';
+import { Err500Component } from './pages/error/err500/err500.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -28,6 +30,8 @@ const routes: Routes = [
     loadChildren: () => import('./modulos/dashboard/dashboard.module').then(m => m.DashboardModule),
     // canActivate: [AuthGuard]
   },
+  { path: '500', component: Err500Component },
+  { path: '**', component: Err404Component }
 ];
 
 @NgModule({
