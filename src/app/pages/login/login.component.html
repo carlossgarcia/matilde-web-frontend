@@ -14,7 +14,7 @@
         <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <input
-              formControlName="usuario"
+              formControlName="correo"
               type="email"
               class="form-control"
               placeholder="Correo"
@@ -37,6 +37,7 @@
                 type="checkbox"
                 name="remember"
                 class="custom-control-input"
+                value="false"
                 id="remember-me"
               />
               <label class="custom-control-label" for="remember-me"
@@ -52,6 +53,13 @@
           >
             Inicia sesión
           </button>
+
+          <div *ngIf="LoginError" class="alert alert-danger">
+            <h5 class="alert-title">
+              <i class="fas fa-exclamation-triangle"></i> Error
+            </h5>
+            {{ LoginMsg }}
+          </div>
         </form>
         <p class="mb-2 text-muted">
           ¿Olvidaste tu Contraseña?

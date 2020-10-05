@@ -6,6 +6,7 @@ import { Err500Component } from './pages/error/err500/err500.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { PersonRegComponent } from './pages/signup/steps/person-reg/person-reg.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent
+  },
+  {
+    path: 'signup/person/:url',
+    component: PersonRegComponent
   },
   {
     path: 'forgot-password',

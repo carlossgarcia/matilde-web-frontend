@@ -1,1 +1,75 @@
-<p>estudiantes works!</p>
+<div class="wrapper">
+  <nav id="sidebar" class="">
+    <div class="sidebar-header">
+      <img
+        src="assets/img/bootstraper-logo.png"
+        alt="bootraper logo"
+        class="app-logo"
+      />
+    </div>
+    <ul class="list-unstyled components text-secondary">
+      <li>
+        <a routerLink="home"><i class="fas fa-home"></i> Inicio </a>
+      </li>
+
+      <li>
+        <a href="settings"><i class="fas fa-cog"></i>Ajustes</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="body" class="active">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+      <button
+        type="button"
+        id="sidebarCollapse"
+        class="btn btn-outline-secondary default-secondary-menu"
+      >
+        <i class="fas fa-bars"></i><span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <div class="nav-dropdown">
+              <a
+                href=""
+                class="nav-item nav-link dropdown-toggle text-secondary"
+                data-toggle="dropdown"
+                ><i class="fas fa-user"></i> <span>John Doe</span>
+                <i style="font-size: 0.8em" class="fas fa-caret-down"></i
+              ></a>
+              <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                <ul class="nav-list">
+                  <li>
+                    <a href="" class="dropdown-item"
+                      ><i class="fas fa-address-card"></i> Perfil
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="" class="dropdown-item"
+                      ><i class="fas fa-envelope"></i> Messages</a
+                    >
+                  </li> -->
+                  <li>
+                    <a href="" class="dropdown-item"
+                      ><i class="fas fa-cog"></i> Ajustes</a
+                    >
+                  </li>
+                  <div class="dropdown-divider"></div>
+                  <li>
+                    <a href="" class="dropdown-item"
+                      ><i class="fas fa-sign-out-alt"></i> Salir
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content">
+      <!-- <router-outlet></router-outlet> -->
+      <app-unity></app-unity>
+    </div>
+  </div>
+</div>

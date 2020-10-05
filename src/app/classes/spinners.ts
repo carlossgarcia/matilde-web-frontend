@@ -9,23 +9,25 @@ class SpanSpinner {
 }
 
 export class SpinnerUtilities {
+    btnMsg = '';
     constructor(public targetBtn: HTMLButtonElement) { }
 
     AddSpinnerToButton(): Promise<void> {
         return new Promise((resolve, reject) => {
-            this.targetBtn.addEventListener('click', () => {
-                this.targetBtn.textContent = '';
-                const spinner = new SpanSpinner().spinner;
-                this.targetBtn.appendChild(spinner);
-                resolve();
-            });
+
+            this.btnMsg = this.targetBtn.textContent;
+            this.targetBtn.textContent = '';
+            const spinner = new SpanSpinner().spinner;
+            this.targetBtn.appendChild(spinner);
+            resolve();
+
         });
     }
 
-    RemoveSpinnerFromButton(msg: string): Promise<void> {
+    RemoveSpinnerFromButton(): Promise<void> {
         return new Promise((resolve, reject) => {
             this.targetBtn.innerHTML = '';
-            this.targetBtn.textContent = msg;
+            this.targetBtn.textContent = this.btnMsg;
             resolve();
         });
     }

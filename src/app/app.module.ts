@@ -9,8 +9,10 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { PersonRegComponent } from './pages/signup/steps/person-reg/person-reg.component';
 import { Err404Component } from './pages/error/err404/err404.component';
 import { Err500Component } from './pages/error/err500/err500.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpErrorInterceptor } from './services/http-error.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+
+      provide: HTTP_INTERCEPTORS,
+
+      useClass: HttpErrorInterceptor,
+
+      multi: true
+
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
