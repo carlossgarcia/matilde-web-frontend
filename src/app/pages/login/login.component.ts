@@ -33,8 +33,6 @@ export class LoginComponent implements OnInit {
       this.LoginMsg = '';
       utilities.AddSpinnerToButton().then(() => {
         const subs = this.authService.Login({ usuario: this.LoginForm.value }).subscribe(result => {
-          console.log(result);
-
           if (result.error) {
             this.LoginError = true;
             this.LoginMsg = result.msg;

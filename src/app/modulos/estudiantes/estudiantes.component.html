@@ -11,10 +11,6 @@
       <li>
         <a routerLink="home"><i class="fas fa-home"></i> Inicio </a>
       </li>
-
-      <li>
-        <a href="settings"><i class="fas fa-cog"></i>Ajustes</a>
-      </li>
     </ul>
   </nav>
   <div id="body" class="active">
@@ -22,7 +18,7 @@
       <button
         type="button"
         id="sidebarCollapse"
-        class="btn btn-outline-secondary default-secondary-menu"
+        class="btn default-secondary-menu"
       >
         <i class="fas fa-bars"></i><span></span>
       </button>
@@ -34,13 +30,20 @@
                 href=""
                 class="nav-item nav-link dropdown-toggle text-secondary"
                 data-toggle="dropdown"
-                ><i class="fas fa-user"></i> <span>John Doe</span>
+                ><i class="fas fa-user mr-2"></i>
+                <span>{{
+                  authS.UserData.UserCopy.persona.nombre +
+                    " " +
+                    authS.UserData.UserCopy.persona.apellidoPaterno +
+                    " " +
+                    authS.UserData.UserCopy.persona.apellidoMaterno
+                }}</span>
                 <i style="font-size: 0.8em" class="fas fa-caret-down"></i
               ></a>
               <div class="dropdown-menu dropdown-menu-right nav-link-menu">
                 <ul class="nav-list">
                   <li>
-                    <a href="" class="dropdown-item"
+                    <a routerLink="profile" class="dropdown-item"
                       ><i class="fas fa-address-card"></i> Perfil
                     </a>
                   </li>
@@ -49,14 +52,16 @@
                       ><i class="fas fa-envelope"></i> Messages</a
                     >
                   </li> -->
-                  <li>
-                    <a href="" class="dropdown-item"
+                  <!-- <li>
+                    <a routerLink="settings" class="dropdown-item"
                       ><i class="fas fa-cog"></i> Ajustes</a
                     >
-                  </li>
+                  </li> -->
                   <div class="dropdown-divider"></div>
                   <li>
-                    <a href="" class="dropdown-item"
+                    <a
+                      (click)="authS.DestroySessionInformation()"
+                      class="dropdown-item"
                       ><i class="fas fa-sign-out-alt"></i> Salir
                     </a>
                   </li>
@@ -68,8 +73,7 @@
       </div>
     </nav>
     <div class="content">
-      <!-- <router-outlet></router-outlet> -->
-      <app-unity></app-unity>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from 'src/app/services/auth.service';
+declare var $: any;
 @Component({
   selector: 'app-estudiantes',
   templateUrl: './estudiantes.component.html',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstudiantesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authS: AuthService) { }
 
   ngOnInit(): void {
+    this.OpenSideBar();
+  }
+
+  OpenSideBar(): void {
+    $('#sidebarCollapse').on('click', () => {
+      $('#sidebar').toggleClass('active');
+      $('#body').toggleClass('active');
+    });
   }
 
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
+import { LoginGuard } from './guards/login.guard';
 import { Err404Component } from './pages/error/err404/err404.component';
 import { Err500Component } from './pages/error/err500/err500.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
@@ -11,7 +12,8 @@ import { PersonRegComponent } from './pages/signup/steps/person-reg/person-reg.c
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [LoginGuard]
   },
   {
     path: 'signup',
