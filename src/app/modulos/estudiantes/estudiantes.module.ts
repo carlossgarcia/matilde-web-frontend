@@ -7,6 +7,7 @@ import { AppComponent } from './pages/app/app.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
   imports: [
     CommonModule,
     EstudiantesRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class EstudiantesModule { }

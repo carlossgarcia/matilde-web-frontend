@@ -36,6 +36,11 @@ export class LoginComponent implements OnInit {
           if (result.error) {
             this.LoginError = true;
             this.LoginMsg = result.msg;
+            if (result.data.action === 'redirect') {
+              setTimeout(() => {
+                this.router.navigateByUrl(result.data.url);
+              }, 1000);
+            }
           } else {
             if (result.data.action === 'redirect') {
               setTimeout(() => {

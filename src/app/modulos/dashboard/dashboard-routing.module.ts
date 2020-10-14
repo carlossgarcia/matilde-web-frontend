@@ -12,9 +12,12 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent
       },
+      {
+        path: '',
+        redirectTo: '/dashboard/home'
+      }
     ]
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
 
 ];
 

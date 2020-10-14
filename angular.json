@@ -34,7 +34,8 @@
               "src/assets/vendor/fontawesome5/js/fontawesome.min.js",
               "src/assets/vendor/chartsjs/Chart.min.js",
               "src/assets/unity/TemplateData/UnityProgress.js",
-              "src/assets/unity/Build/UnityLoader.js"
+              "src/assets/unity/Build/UnityLoader.js",
+              "node_modules/blueimp-canvas-to-blob/js/canvas-to-blob.min.js"
             ]
           },
           "configurations": {

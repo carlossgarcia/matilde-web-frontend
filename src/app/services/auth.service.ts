@@ -4,6 +4,8 @@ import { map, retry } from 'rxjs/operators';
 import { httpOptions } from '../classes/headers';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
+import { ILocalStorageSegCatUsuario } from '../classes/core';
+import { User } from '../classes/user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,8 @@ export class AuthService {
   jwtS = new JwtHelperService();
 
   isLoggedIn = false;
-  UserData: any;
+  UserData: ILocalStorageSegCatUsuario;
+  UserClass: User;
   Token: string;
 
   constructor(private http: HttpClient, public router: Router) {
@@ -28,6 +31,7 @@ export class AuthService {
         } else {
           this.Token = res.data.token;
           this.UserData = this.jwtS.decodeToken(res.data.token);
+          this.UserClass = new User(this.UserData);
           this.SaveAuthInformation();
           return res;
         }
@@ -93,6 +97,7 @@ export class AuthService {
       this.isLoggedIn = true;
       this.Token = localStorage.getItem('token');
       this.UserData = JSON.parse(localStorage.getItem('user'));
+      this.UserClass = new User(this.UserData);
       this.ValidateToken();
     } else {
       console.log('No hay información');

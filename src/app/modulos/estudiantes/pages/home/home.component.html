@@ -2,15 +2,14 @@
   <div class="row">
     <div class="col-md-4">
       <div class="card">
-        <h5 class="card-header">¡Bienvenido!</h5>
+        <h5 class="card-header">¡Bienvenido! {{authS.UserClass.FormatedName}}</h5>
         <div class="card-body">
-          <h5 class="card-title">Este es el sistema</h5>
+          <h5 class="card-title">{{authS.UserClass.Greetings}}</h5>
           <p class="card-text">
-            Aquí podrás estudiar todos los temas relacionados con...
+            Aquí podrás estudiar variados temas relacionados con la salud. ¡Empecemos!
           </p>
           <a routerLink="/estudiantes/app" class="btn btn-primary"
-            >Ir a la aplicación</a
-          >
+            >Ir a la aplicación</a>
         </div>
       </div>
     </div>

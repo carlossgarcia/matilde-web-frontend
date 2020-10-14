@@ -54,7 +54,7 @@ export class PersonRegComponent implements OnInit {
             this.PersonaRegMsg = result.msg;
 
             if (result.data.action === 'redirect') {
-              this.authService.isLoggedIn = true;
+              this.authService.isLoggedIn = false;
               this.router.navigateByUrl(result.data.url);
             }
           }

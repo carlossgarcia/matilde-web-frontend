@@ -1,0 +1,28 @@
+<input
+  class="form-control mb-2"
+  type="file"
+  (change)="onImageChange($event)"
+  accept="image/*"
+/>
+
+<figure class="figure">
+  <img
+    *ngIf="imagePreview"
+    [src]="sanitizer.bypassSecurityTrustUrl(imagePreview)"
+    class="figure-img img-fluid rounded"
+    alt="..."
+  />
+  <figcaption class="figure-caption">{{ figcaption }}</figcaption>
+</figure>
+
+<div *ngIf="hasChangeImage" class="mt-3">
+  <h5>Confirmar cambio</h5>
+  <div class="row">
+    <div class="col-6">
+      <button class="btn">Aceptar</button>
+    </div>
+    <div class="col-6">
+      <button class="btn">Cancelar</button>
+    </div>
+  </div>
+</div>

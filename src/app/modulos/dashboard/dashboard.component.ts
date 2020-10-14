@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 declare var $: any;
 
 @Component({
@@ -8,7 +9,7 @@ declare var $: any;
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authS: AuthService) { }
 
   ngOnInit(): void {
     this.OpenSideBar();
