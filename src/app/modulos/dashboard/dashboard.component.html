@@ -4,8 +4,8 @@
       <img src="assets/img/bootstraper-logo.png" alt="bootraper logo" class="app-logo" />
     </div>
     <ul class="list-unstyled components text-secondary">
-      <li>
-        <a routerLink="home"><i class="fas fa-home"></i> Dashboard </a>
+      <li *ngFor="let route of htmlRoutes">
+        <a [routerLink]="route.route"><i [ngClass]="route.icon"></i> {{route.name}} </a>
       </li>
     </ul>
   </nav>

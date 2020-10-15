@@ -1,0 +1,422 @@
+<div class="container-fluid">
+
+    <div class="box box-primary">
+        <div class="box-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab"
+                        aria-controls="general" aria-selected="true">Licencias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="system-tab" data-toggle="tab" href="#system" role="tab"
+                        aria-controls="system" aria-selected="false">Dar de alta</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade active show" id="general" role="tabpanel" aria-labelledby="general-tab">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">Instituciones</div>
+                                    <div class="card-body">
+                                        <p class="card-title"></p>
+                                        <div id="dataTables-example_wrapper"
+                                            class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table width="100%"
+                                                        class="table table-hover dataTable no-footer dtr-inline"
+                                                        id="dataTables-example" role="grid"
+                                                        aria-describedby="dataTables-example_info" style="width: 100%;">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting_asc" tabindex="0"
+                                                                    aria-controls="dataTables-example" rowspan="1"
+                                                                    colspan="1" style="width: 498px;"
+                                                                    aria-sort="ascending"
+                                                                    aria-label="Role Name: activate to sort column descending">
+                                                                    Role Name</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTables-example" rowspan="1"
+                                                                    colspan="1" style="width: 342px;"
+                                                                    aria-label="Status: activate to sort column ascending">
+                                                                    Status</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTables-example" rowspan="1"
+                                                                    colspan="1" style="width: 321px;"
+                                                                    aria-label=": activate to sort column ascending">
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr role="row" class="odd">
+                                                                <td class="sorting_1 dtr-control">Administrator</td>
+                                                                <td>Active</td>
+                                                                <td class="text-right">
+                                                                    <a href="permissions.html"
+                                                                        class="btn btn-outline-secondary btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-toggle-on fa-w-18"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="toggle-on"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 576 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z">
+                                                                            </path>
+                                                                        </svg>
+                                                                        <!-- <i class="fas fa-toggle-on"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-info btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-pen fa-w-16"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="pen" role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-pen"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-danger btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-trash fa-w-14"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="trash"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-trash"></i> --></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr role="row" class="even">
+                                                                <td class="sorting_1 dtr-control">Audit</td>
+                                                                <td>Active</td>
+                                                                <td class="text-right">
+                                                                    <a href="permissions.html"
+                                                                        class="btn btn-outline-secondary btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-toggle-on fa-w-18"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="toggle-on"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 576 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z">
+                                                                            </path>
+                                                                        </svg>
+                                                                        <!-- <i class="fas fa-toggle-on"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-info btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-pen fa-w-16"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="pen" role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-pen"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-danger btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-trash fa-w-14"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="trash"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-trash"></i> --></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr role="row" class="odd">
+                                                                <td class="sorting_1 dtr-control">Author</td>
+                                                                <td>Active</td>
+                                                                <td class="text-right">
+                                                                    <a href="permissions.html"
+                                                                        class="btn btn-outline-secondary btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-toggle-on fa-w-18"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="toggle-on"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 576 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z">
+                                                                            </path>
+                                                                        </svg>
+                                                                        <!-- <i class="fas fa-toggle-on"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-info btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-pen fa-w-16"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="pen" role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-pen"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-danger btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-trash fa-w-14"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="trash"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-trash"></i> --></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr role="row" class="even">
+                                                                <td class="sorting_1 dtr-control">Contributor</td>
+                                                                <td>Active</td>
+                                                                <td class="text-right">
+                                                                    <a href="permissions.html"
+                                                                        class="btn btn-outline-secondary btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-toggle-on fa-w-18"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="toggle-on"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 576 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z">
+                                                                            </path>
+                                                                        </svg>
+                                                                        <!-- <i class="fas fa-toggle-on"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-info btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-pen fa-w-16"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="pen" role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-pen"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-danger btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-trash fa-w-14"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="trash"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-trash"></i> --></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr role="row" class="odd">
+                                                                <td class="sorting_1 dtr-control">Editor</td>
+                                                                <td>Disabled</td>
+                                                                <td class="text-right">
+                                                                    <a href="permissions.html"
+                                                                        class="btn btn-outline-secondary btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-toggle-on fa-w-18"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="toggle-on"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 576 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z">
+                                                                            </path>
+                                                                        </svg>
+                                                                        <!-- <i class="fas fa-toggle-on"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-info btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-pen fa-w-16"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="pen" role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-pen"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-danger btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-trash fa-w-14"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="trash"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-trash"></i> --></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr role="row" class="even">
+                                                                <td class="sorting_1 dtr-control">Manager</td>
+                                                                <td>Active</td>
+                                                                <td class="text-right">
+                                                                    <a href="permissions.html"
+                                                                        class="btn btn-outline-secondary btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-toggle-on fa-w-18"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="toggle-on"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 576 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z">
+                                                                            </path>
+                                                                        </svg>
+                                                                        <!-- <i class="fas fa-toggle-on"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-info btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-pen fa-w-16"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="pen" role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-pen"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-danger btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-trash fa-w-14"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="trash"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-trash"></i> --></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr role="row" class="odd">
+                                                                <td class="sorting_1 dtr-control">Writer</td>
+                                                                <td>Active</td>
+                                                                <td class="text-right">
+                                                                    <a href="permissions.html"
+                                                                        class="btn btn-outline-secondary btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-toggle-on fa-w-18"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="toggle-on"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 576 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z">
+                                                                            </path>
+                                                                        </svg>
+                                                                        <!-- <i class="fas fa-toggle-on"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-info btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-pen fa-w-16"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="pen" role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-pen"></i> --></a>
+                                                                    <a href=""
+                                                                        class="btn btn-outline-danger btn-rounded"><svg
+                                                                            class="svg-inline--fa fa-trash fa-w-14"
+                                                                            aria-hidden="true" focusable="false"
+                                                                            data-prefix="fas" data-icon="trash"
+                                                                            role="img"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                            <path fill="currentColor"
+                                                                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z">
+                                                                            </path>
+                                                                        </svg><!-- <i class="fas fa-trash"></i> --></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <div class="dataTables_info" id="dataTables-example_info"
+                                                        role="status" aria-live="polite">Showing 1 to 10 of 10 entries
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-7">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="system" role="tabpanel" aria-labelledby="system-tab">
+                    <div class="col-md-8">
+                        <form class="form-horizontal">
+                            <div class="form-group row">
+                                <label class="col-sm-2">Fecha de inicio de licencia</label>
+                                <div class="col-sm-10">
+                                    <input type="date" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="line"></div><br>
+                            <div class="form-group row">
+                                <label class="col-sm-2">Fecha de expiración de licencia</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control">
+                                    <small class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="line"></div><br>
+                            <div class="form-group row">
+                                <label class="col-sm-2">Licencia</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="" disabled class="form-control">
+                                </div>
+                            </div>
+                            <div class="line"></div><br>
+                            <div class="form-group row">
+                                <label class="col-sm-2">Escoger institución</label>
+                                <div class="col-sm-10">
+                                    <select type="text" name="" class="form-control">
+                                        <option value="uo">Universidad Olmeca</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="line"></div><br>
+                            <div class="form-group row">
+                                <div class="col-sm-4 offset-sm-2">
+                                    <button type="submit" class="btn btn-primary mb-2">
+                                        <i class="fas fa-save"></i>
+                                        Generar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

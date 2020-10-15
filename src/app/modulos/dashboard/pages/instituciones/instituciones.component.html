@@ -1,0 +1,141 @@
+<div class="container-fluid">
+
+    <div class="box box-primary">
+        <div class="box-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab"
+                        aria-controls="general" aria-selected="true">Instituciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="system-tab" data-toggle="tab" href="#system" role="tab"
+                        aria-controls="system" aria-selected="false">Dar de alta</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade active show" id="general" role="tabpanel" aria-labelledby="general-tab">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">Instituciones</div>
+                                    <div class="card-body">
+                                        <p class="card-title"></p>
+                                        <div id="dataTables-instituciones_wrapper"
+                                            class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <button class="btn" (click)="InitData()"><i
+                                                            class="fas fa-undo"></i></button>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <table class="table table-hover dataTable no-footer dtr-inline"
+                                                        id="dataTables-instituciones" width="100%" role="grid"
+                                                        aria-describedby="dataTables-instituciones_info"
+                                                        style="width: 100%;">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTables-instituciones" rowspan="1"
+                                                                    colspan="1" style="width: 84px;"
+                                                                    aria-label="ID: activate to sort column ascending">
+                                                                    ID</th>
+                                                                <th class="sorting_asc" tabindex="0"
+                                                                    aria-controls="dataTables-instituciones" rowspan="1"
+                                                                    colspan="1" style="width: 234px;"
+                                                                    aria-label="Name: activate to sort column descending"
+                                                                    aria-sort="ascending">Nombre</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTables-instituciones" rowspan="1"
+                                                                    colspan="1" style="width: 157px;"
+                                                                    aria-label="Salary: activate to sort column ascending">
+                                                                    Siglas</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTables-instituciones" rowspan="1"
+                                                                    colspan="1" style="width: 212px;"
+                                                                    aria-label="Country: activate to sort column ascending">
+                                                                    Fecha expiración</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTables-instituciones" rowspan="1"
+                                                                    colspan="1" style="width: 351px;"
+                                                                    aria-label="City: activate to sort column ascending">
+                                                                    Fecha de registro</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr role="row" class="odd"
+                                                                *ngFor="let inst of INSTITUCIONES">
+                                                                <td>{{inst.cveInstitucion}}</td>
+                                                                <td>{{inst.nombre}}</td>
+                                                                <td>{{inst.siglas}}</td>
+                                                                <td>{{inst.fechaExp}}</td>
+                                                                <td>{{inst.fechaRegistro}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <div class="dataTables_info" id="dataTables-instituciones_info"
+                                                        role="status" aria-live="polite">Showing 1 to 10 of 10 entries
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-7">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="system" role="tabpanel" aria-labelledby="system-tab">
+                    <div class="col-md-8">
+                        <form (submit)="Create()" [formGroup]="InstitucionForm" class="form-horizontal">
+                            <div class="form-group row">
+                                <label class="col-sm-2">Nombre de la institución</label>
+                                <div class="col-sm-10">
+                                    <input formControlName="nombre" type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="line"></div><br>
+                            <div class="form-group row">
+                                <label class="col-sm-2">Siglas de la institución</label>
+                                <div class="col-sm-10">
+                                    <input formControlName="siglas" type="text" class="form-control">
+                                    <small class="form-text text-muted">Siglas comerciales de la institución.</small>
+                                </div>
+                            </div>
+                            <div class="line"></div><br>
+                            <div class="form-group row">
+                                <label class="col-sm-2">Fecha de expiración de la institución</label>
+                                <div class="col-sm-10">
+                                    <input formControlName="fecha_exp" type="date" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="line"></div><br>
+                            <div class="form-group row">
+                                <div class="col-sm-4 offset-sm-2">
+                                    <button [disabled]="!InstitucionForm.valid" type="submit"
+                                        class="btn btn-primary mb-2">
+                                        <i class="fas fa-save"></i>
+                                        Generar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

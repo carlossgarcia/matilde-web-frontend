@@ -19,7 +19,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "styles": [
               "src/styles.css",
               "src/assets/vendor/bootstrap4/css/bootstrap.min.css",
@@ -33,6 +36,7 @@
               "src/assets/vendor/fontawesome5/js/solid.min.js",
               "src/assets/vendor/fontawesome5/js/fontawesome.min.js",
               "src/assets/vendor/chartsjs/Chart.min.js",
+              "src/assets/vendor/DataTables/datatables.min.js",
               "src/assets/unity/TemplateData/UnityProgress.js",
               "src/assets/unity/Build/UnityLoader.js",
               "node_modules/blueimp-canvas-to-blob/js/canvas-to-blob.min.js"
@@ -94,8 +98,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
             "scripts": []
           }
         },
@@ -107,7 +116,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
