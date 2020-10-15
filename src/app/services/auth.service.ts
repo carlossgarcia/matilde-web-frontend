@@ -111,6 +111,8 @@ export class AuthService {
   ValidateToken(): void {
     const obs = this.http.post('http://localhost:3001/auth/validate-token', { token: this.Token }, httpOptions).pipe(
       map((res: any) => {
+        console.log('Hola => ', res);
+
         return res;
       }),
       retry(1)
