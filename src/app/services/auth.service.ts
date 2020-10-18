@@ -6,6 +6,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
 import { ILocalStorageSegCatUsuario } from '../classes/core';
 import { User } from '../classes/user';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class AuthService {
   }
 
   Login(data: any) {
-    return this.http.post('http://localhost:3001/auth/login', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/login', data, httpOptions).pipe(
       map((res: any) => {
         if (res.error) {
           return res;
@@ -42,7 +43,7 @@ export class AuthService {
   }
 
   Signup(data: any) {
-    return this.http.post('http://localhost:3001/auth/signup', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/signup', data, httpOptions).pipe(
       map((res: any) => {
         return res;
       }),
@@ -51,7 +52,7 @@ export class AuthService {
   }
 
   VerifyPersonPreRegistration(data: any) {
-    return this.http.post('http://localhost:3001/auth/verify/person-reg', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/verify/person-reg', data, httpOptions).pipe(
       map((res: any) => {
         return res;
       }),
@@ -60,7 +61,7 @@ export class AuthService {
   }
 
   CompleteRegister(data: any) {
-    return this.http.post('http://localhost:3001/auth/person-reg', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/person-reg', data, httpOptions).pipe(
       map((res: any) => {
         return res;
       }),
@@ -109,7 +110,7 @@ export class AuthService {
    * Validamos que el token esté vigente
    */
   ValidateToken(): void {
-    const obs = this.http.post('http://localhost:3001/auth/validate-token', { token: this.Token }, httpOptions).pipe(
+    const obs = this.http.post(environment.url + '/auth/validate-token', { token: this.Token }, httpOptions).pipe(
       map((res: any) => {
         console.log('Hola => ', res);
 
