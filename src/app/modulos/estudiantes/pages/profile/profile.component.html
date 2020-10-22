@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container">
   <div class="page-title">
-    <h3>Perfil</h3>
+    <h3 class="text-white">Perfil</h3>
   </div>
   <div class="row">
     <div class="col-lg-12">
@@ -10,7 +10,7 @@
           <h5 class="card-title"></h5>
           <form [formGroup]="ProfileForm" accept-charset="utf-8">
             <div class="row">
-              <div class="col-8">
+              <div class="col-12 col-sm-12 col-md-7 col-lg-6">
                 <div class="form-group row">
                   <label class="col-sm-2" for="nombre">Nombre</label>
                   <div class="col-sm-10">
@@ -67,15 +67,8 @@
                     <small class="form-text"></small>
                   </div>
                 </div>
-                <div class="form-group row">
-                  <div class="col-sm-10 offset-sm-2">
-                    <button type="submit" class="btn btn-primary">
-                      Guardar
-                    </button>
-                  </div>
-                </div>
               </div>
-              <div class="col-4">
+              <div class="col">
                 <div>
                   <div class="text-center">
                     <app-image-uploader-preview
@@ -83,6 +76,13 @@
                     ></app-image-uploader-preview>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="form-group row justify-content-center">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <button type="submit" class="btn bg-blue text-white w-100 m-auto d-block">
+                  Guardar
+                </button>
               </div>
             </div>
           </form>

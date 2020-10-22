@@ -1,0 +1,22 @@
+@import '../../../assets/unity/TemplateData/style.css';
+
+#unityContainer{
+    width: 100% !important;
+    height: 100%;
+    background: none !important;
+}
+
+
+.webgl-logo{
+    display: none !important; 
+}
+
+.title{
+    display: none !important; 
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

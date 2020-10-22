@@ -5,7 +5,7 @@ declare var UnityProgress: any;
 @Component({
   selector: 'app-unity',
   templateUrl: './unity.component.html',
-  styleUrls: ['./unity.component.css']
+  styleUrls: ['./unity.component.scss']
 })
 export class UnityComponent implements OnInit {
 

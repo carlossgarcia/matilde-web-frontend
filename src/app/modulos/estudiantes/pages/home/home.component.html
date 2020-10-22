@@ -1,16 +1,19 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
+<div class="container animated fadeIn low">
+  <div class="row justify-content-center">
+    <div class="col-12 my-1 animated bounceIn">
+      <h5 class="text-white text-center text-uppercase">¡Bienvenido! {{authS.UserClass.FormatedName}}</h5>
+    </div>
+    <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-9">
       <div class="card">
-        <h5 class="card-header">¡Bienvenido! {{authS.UserClass.FormatedName}}</h5>
         <div class="card-body">
-          <h5 class="card-title">{{authS.UserClass.Greetings}}</h5>
-          <p class="card-text">
+          <h5 class="card-title text-center">{{authS.UserClass.Greetings}}</h5>
+          <p class="card-text text-center">
             Aquí podrás estudiar variados temas relacionados con la salud. ¡Empecemos!
           </p>
-          <a routerLink="/estudiantes/app" class="btn btn-primary"
-            >Ir a la aplicación</a>
+          <a routerLink="/estudiantes/app" class="btn color-blue m-auto d-block text-center animated infinite pulse">Ir a la aplicación</a>
         </div>
+        <img class="card-img-top" src="assets/img/flayer-recortado.png" alt="Card image cap">
+
       </div>
     </div>
   </div>

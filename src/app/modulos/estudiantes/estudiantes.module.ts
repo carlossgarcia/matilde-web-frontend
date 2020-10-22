@@ -8,7 +8,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { UtilidadesService } from '../../services/utilidades.service';
 
 
 @NgModule({
@@ -19,6 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  providers:[
+    UtilidadesService
   ]
 })
 export class EstudiantesModule { }

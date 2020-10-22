@@ -38,6 +38,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   { path: '500', component: Err500Component },
+  { path: '', redirectTo: '/estudiantes/home', pathMatch: 'full' },
   { path: '**', component: Err404Component }
 ];
 

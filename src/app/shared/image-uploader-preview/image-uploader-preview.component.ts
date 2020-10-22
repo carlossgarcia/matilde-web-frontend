@@ -5,7 +5,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-image-uploader-preview',
   templateUrl: './image-uploader-preview.component.html',
-  styleUrls: ['./image-uploader-preview.component.css']
+  styleUrls: ['./image-uploader-preview.component.scss']
 })
 export class ImageUploaderPreviewComponent implements OnInit {
 

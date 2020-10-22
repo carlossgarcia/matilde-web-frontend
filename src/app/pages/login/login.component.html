@@ -1,15 +1,15 @@
 <div class="wrapper">
   <div class="auth-content">
-    <div class="card">
+    <div class="card animated fadeIn low">
       <div class="card-body text-center">
         <div class="mb-4">
           <img
-            class="brand"
-            src="assets/img/bootstraper-logo.png"
+            class="brand animated infinite pulse"
+            src="assets/img/logo.png"
             alt="bootstraper logo"
           />
         </div>
-        <h6 class="mb-4 text-muted">Inicia sesión a tu cuenta</h6>
+        <h5 class="mb-3 text-muted">Inicia sesión a tu cuenta</h5>
 
         <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
@@ -31,7 +31,7 @@
             />
           </div>
           <div class="form-group text-left">
-            <div class="custom-control custom-checkbox">
+            <div class="custom-control ml-1 mt-4 custom-checkbox">
               <input
                 formControlName="recordarme"
                 type="checkbox"
@@ -49,7 +49,7 @@
             [disabled]="!LoginForm.valid"
             id="LoginBtn"
             type="submit"
-            class="btn btn-primary shadow-2 mb-4"
+            class="btn w-75 bg-blue text-white shadow-2 mt-4 mb-4"
           >
             Inicia sesión
           </button>
@@ -63,10 +63,10 @@
         </form>
         <p class="mb-2 text-muted">
           ¿Olvidaste tu Contraseña?
-          <a routerLink="/forgot-password">Reestablece tu contraseña</a>
+          <a class="color-blue" routerLink="/forgot-password">Reestablece tu contraseña</a>
         </p>
         <p class="mb-0 text-muted">
-          ¿Aún no tienes una cuenta? <a routerLink="/signup">Regístrate</a>
+          ¿Aún no tienes una cuenta? <a class="color-blue" routerLink="/signup">Regístrate</a>
         </p>
       </div>
     </div>

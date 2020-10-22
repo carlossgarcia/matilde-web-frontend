@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   LoginForm = new FormGroup({
@@ -34,8 +34,13 @@ export class LoginComponent implements OnInit {
       utilities.AddSpinnerToButton().then(() => {
         const subs = this.authService.Login({ usuario: this.LoginForm.value }).subscribe(result => {
           if (result.error) {
+            utilities.RemoveSpinnerFromButton();
             this.LoginError = true;
-            this.LoginMsg = result.msg;
+            if(typeof result.msg == 'string'){
+              this.LoginMsg = result.msg;
+            }else{
+              this.LoginMsg = "Verifique sus datos.";
+            }
             if (result.data.action === 'redirect') {
               setTimeout(() => {
                 this.router.navigateByUrl(result.data.url);
@@ -50,7 +55,9 @@ export class LoginComponent implements OnInit {
             }
           }
           subs.unsubscribe();
-          utilities.RemoveSpinnerFromButton();
+          setTimeout(() => {
+            utilities.RemoveSpinnerFromButton();
+          }, 1000);
         });
       });
       console.log('Desarrollar lógica');

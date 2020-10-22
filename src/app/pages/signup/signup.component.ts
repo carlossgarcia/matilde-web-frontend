@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
   SignupForm = new FormGroup({
@@ -33,6 +33,8 @@ export class SignupComponent implements OnInit {
       this.SignupMsg = '';
       utilities.AddSpinnerToButton().then(() => {
         this.authService.Signup({ datos: this.SignupForm.value }).subscribe(result => {
+          console.log(result);
+          
           if (result.error) {
             this.SignupError = true;
             this.SignupMsg = result.msg;

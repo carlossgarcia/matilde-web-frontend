@@ -5,7 +5,7 @@ declare var $: any;
 @Component({
   selector: 'app-instituciones',
   templateUrl: './instituciones.component.html',
-  styleUrls: ['./instituciones.component.css']
+  styleUrls: ['./instituciones.component.scss']
 })
 export class InstitucionesComponent implements OnInit {
 

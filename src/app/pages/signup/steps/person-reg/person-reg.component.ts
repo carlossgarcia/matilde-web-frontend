@@ -6,7 +6,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-person-reg',
   templateUrl: './person-reg.component.html',
-  styleUrls: ['./person-reg.component.css']
+  styleUrls: ['./person-reg.component.scss']
 })
 export class PersonRegComponent implements OnInit {
   PersonaRegForm = new FormGroup({

@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/**
+ * NgxSpinnerModule es una libreria para crear loadings en angular con typescript
+ */
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -29,6 +34,7 @@ import { HttpErrorInterceptor } from './services/http-error.interceptor';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [
     {

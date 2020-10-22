@@ -1,0 +1,27 @@
+.app-logo{
+    width: 11rem;
+    margin-top: -2rem !important;
+}
+
+
+#body>.navbar {
+    border-bottom: none !important;
+    min-height: 4.5rem !important;
+
+}
+
+#sidebar .sidebar-header {
+    border-bottom: none !important;
+    // border-bottom: 1px solid #e6ecf5;
+    max-height: 9rem !important;
+}
+
+#sidebar {
+    border-right:none !important;
+    // border-right: 1px solid #e6ecf5;
+}
+.content{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-top: 1rem !important;
+}

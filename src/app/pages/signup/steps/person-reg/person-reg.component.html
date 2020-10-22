@@ -1,15 +1,15 @@
 <div class="wrapper">
   <div class="auth-content">
-    <div class="card">
+    <div class="card animated fadeIn">
       <div class="card-body text-center">
         <div class="mb-4">
           <img
-            class="brand"
-            src="assets/img/bootstraper-logo.png"
+            class="brand animated infinite pulse"
+            src="assets/img/logo.png"
             alt="bootstraper logo"
           />
         </div>
-        <h6 class="mb-4 text-muted">Complementa tus datos</h6>
+        <h5 class="mb-4 text-muted">Complementa tus datos</h5>
 
         <form [formGroup]="PersonaRegForm">
           <div class="form-group">
@@ -54,7 +54,7 @@
             [disabled]="!PersonaRegForm.valid"
             id="SignupBtn"
             type="button"
-            class="btn btn-primary shadow-2 mb-4"
+            class="btn w-75 bg-blue text-white shadow-2 mt-4 mb-4"
           >
             Terminar registro
           </button>
@@ -67,7 +67,7 @@
           </div>
         </form>
         <p class="mb-0 text-muted">
-          ¿Ya tienes una cuenta? <a href="login">Iniciar sesión</a>
+          ¿Ya tienes una cuenta? <a class="color-blue" href="login">Iniciar sesión</a>
         </p>
       </div>
     </div>

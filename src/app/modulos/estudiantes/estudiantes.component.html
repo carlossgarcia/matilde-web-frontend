@@ -1,24 +1,24 @@
-<div class="wrapper">
-  <nav id="sidebar" class="">
+<div class="wrapper bg-dark">
+  <nav id="sidebar" class="bg-blue" [ngClass]="{'active': utilidadesS.innerWidth < 800}">
     <div class="sidebar-header">
       <img
-        src="assets/img/bootstraper-logo.png"
+        src="assets/img/logo con texto.png"
         alt="bootraper logo"
         class="app-logo"
       />
     </div>
     <ul class="list-unstyled components text-secondary">
       <li>
-        <a routerLink="home"><i class="fas fa-home"></i> Inicio </a>
+        <a class="text-white" routerLink="home"><i class="fas fa-home"></i> Inicio </a>
       </li>
     </ul>
   </nav>
-  <div id="body" class="active">
-    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+  <div id="body" [ngClass]="{'active': utilidadesS.innerWidth < 800}">
+    <nav class="navbar navbar-expand-lg navbar-white bg-dark">
       <button
         type="button"
         id="sidebarCollapse"
-        class="btn default-secondary-menu"
+        class="btn default-secondary-menu text-white"
       >
         <i class="fas fa-bars"></i><span></span>
       </button>
@@ -32,7 +32,7 @@
               <div class="dropdown-menu dropdown-menu-right nav-link-menu">
                 <ul class="nav-list">
                   <li *ngFor="let m of authS.UserClass.FormatedModules">
-                    <a [routerLink]="m.ruta" class="dropdown-item"><i [ngClass]="m.icono"></i> {{m.nombre}}
+                    <a [routerLink]="m.ruta" class="dropdown-item text-white"><i [ngClass]="m.icono"></i> {{m.nombre}}
                     </a>
                   </li>
                 </ul>
@@ -44,7 +44,7 @@
             <div class="nav-dropdown">
               <a
                 href=""
-                class="nav-item nav-link dropdown-toggle text-secondary"
+                class="nav-item nav-link dropdown-toggle text-white"
                 data-toggle="dropdown"
                 ><i class="fas fa-user mr-2"></i>
                 <span>{{
@@ -60,7 +60,7 @@
                     </a>
                   </li>
                   <div class="dropdown-divider"></div>
-                  <li>
+                  <li class="pointer">
                     <a
                       (click)="authS.DestroySessionInformation()"
                       class="dropdown-item"
