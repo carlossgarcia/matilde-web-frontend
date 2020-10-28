@@ -30,8 +30,7 @@
 						"styles": [
 							"src/styles.scss",
 							"src/assets/css/master.css",
-							"src/assets/vendor/chartsjs/Chart.min.css",
-							"src/assets/vendor/flagiconcss3/css/flag-icon.min.css"
+							"src/assets/vendor/chartsjs/Chart.min.css"
 						],
 						"scripts": [
 							"src/assets/vendor/fontawesome5/js/solid.min.js",
