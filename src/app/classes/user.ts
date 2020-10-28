@@ -13,10 +13,10 @@ export class User {
             greet = '¡Buenos días!';
         }
         if (hour >= 12 && hour <= 18) {
-            greet = '¡Buenos tardes!';
+            greet = '¡Buenas tardes!';
         }
         if (hour >= 19 && hour <= 23) {
-            greet = '¡Buenos noches!';
+            greet = '¡Buenas noches!';
         }
         return greet;
     }
