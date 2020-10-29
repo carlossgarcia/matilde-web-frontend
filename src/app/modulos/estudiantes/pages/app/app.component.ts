@@ -13,10 +13,10 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.loading.show();
-    setTimeout(() => {
-      this.loading.hide();
-    }, 3800);
+    // this.loading.show();
+    // setTimeout(() => {
+    //   this.loading.hide();
+    // }, 3800);
   }
 
 }

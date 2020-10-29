@@ -19,8 +19,20 @@ export class UnityComponent implements OnInit {
     this.unityInstance = UnityLoader.instantiate(
       'unityContainer',
       'assets/unity/Build/build.json',
-      { onProgress: UnityProgress }
+      { onProgress: this.UnityProgress }
     );
+  }
+
+  UnityProgress(unityInstance, progress) {
+    if (!unityInstance.Module) {
+      return;
+    }
+    (document.querySelector('#progress-bar') as HTMLElement).style.width = (100 * progress) + '%';
+    if (progress == 1) {
+      document.querySelector('#progress-bar-container').remove();
+      document.querySelector('#msg').remove();
+      unityInstance.logo.style.display = unityInstance.progress.style.display = 'none';
+    }
   }
 
 }
