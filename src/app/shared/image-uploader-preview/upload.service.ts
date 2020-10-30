@@ -1,21 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, retry } from 'rxjs/operators';
-import { httpOptions } from 'src/app/classes/headers';
+import { httpFilesOptions } from 'src/app/classes/headers';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaEstudianteService {
+export class UploadService {
 
   constructor(public http: HttpClient) { }
 
-  UpdatePersonaInfo({ nombre, apellidoPaterno, apellidoMaterno }) {
-    const data = {
-      nombre, apellidoPaterno, apellidoMaterno
-    };
-    return this.http.put(environment.url + '/persona/update', { persona: data }, httpOptions).pipe(
+  UploadImage(url: string, data) {
+    return this.http.post(environment.url + url, data, httpFilesOptions).pipe(
       map((res: any) => {
         return res;
       }),

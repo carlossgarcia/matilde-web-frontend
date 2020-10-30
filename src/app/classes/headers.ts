@@ -9,3 +9,9 @@ export const httpOptions = {
         Authorization: 'Bearer ' + token
     })
 };
+
+export const httpFilesOptions = {
+    headers: new HttpHeaders({
+        Authorization: 'Bearer ' + token
+    })
+};

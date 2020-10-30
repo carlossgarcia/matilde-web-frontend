@@ -29,12 +29,14 @@ export class ProfileComponent implements OnInit {
 
   }
 
-  Update() {
+  Update(): void {
     console.log('Actualizando...');
     document.querySelector('#BtnSave').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
     <span class="sr-only">Actualizando...</span>`;
     const subs = this.personaEstS.UpdatePersonaInfo(this.ProfileForm.value).subscribe(result => {
-      console.log(result)
+      if (result.error === false) {
+        this.authS.UserClass.UpdatePersona(this.ProfileForm.value);
+      }
       subs.unsubscribe();
       document.querySelector('#BtnSave').innerHTML = 'Guardar';
     })

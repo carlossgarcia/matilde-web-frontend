@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Ng2ImgMaxService } from 'ng2-img-max';
 import { DomSanitizer } from '@angular/platform-browser';
+import { UploadService } from './upload.service';
 
 @Component({
   selector: 'app-image-uploader-preview',
@@ -17,10 +18,12 @@ export class ImageUploaderPreviewComponent implements OnInit {
   hasChangeImage = false;
 
   @Input() preloadUserImg: string;
+  @Input() url: string;
 
   constructor(
     private ng2ImgMax: Ng2ImgMaxService,
-    public sanitizer: DomSanitizer) { }
+    public sanitizer: DomSanitizer,
+    public uploadS: UploadService) { }
 
   ngOnInit(): void {
     if (this.preloadUserImg !== '') {
@@ -47,6 +50,15 @@ export class ImageUploaderPreviewComponent implements OnInit {
         console.log('😢 Oh no!', error);
       }
     );
+  }
+
+  Upload() {
+    const form = new FormData();
+    form.append('avatar', this.uploadedImage);
+    const subs = this.uploadS.UploadImage(this.url, form).subscribe(r => {
+      console.log(r);
+      subs.unsubscribe()
+    });
   }
 
 

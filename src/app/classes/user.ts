@@ -28,4 +28,11 @@ export class User {
     get FormatedModules(): Array<{ nombre: string, ruta: string, icono: string }> {
         return this.data.UserCopy.modulos.map(m => ({ nombre: m.nombre, ruta: m.ruta, icono: m.icono }));
     }
+
+    UpdatePersona({ nombre, apellidoPaterno, apellidoMaterno }): void {
+        this.data.UserCopy.persona.nombre = nombre;
+        this.data.UserCopy.persona.apellidoPaterno = apellidoPaterno;
+        this.data.UserCopy.persona.apellidoMaterno = apellidoMaterno;
+        localStorage.setItem('user', JSON.stringify(this.data))
+    }
 }
