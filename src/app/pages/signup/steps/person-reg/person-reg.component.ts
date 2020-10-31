@@ -13,7 +13,9 @@ export class PersonRegComponent implements OnInit {
     usuario: new FormControl(''),
     nombre: new FormControl(''),
     apellidoma: new FormControl(''),
-    apellidopa: new FormControl('')
+    apellidopa: new FormControl(''),
+    fechaNacim: new FormControl(''),
+    genero: new FormControl('')
   });
 
   PersonaRegBtn: HTMLButtonElement;
