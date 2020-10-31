@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Ng2ImgMaxService } from 'ng2-img-max';
 import { DomSanitizer } from '@angular/platform-browser';
 import { UploadService } from './upload.service';
@@ -19,6 +19,7 @@ export class ImageUploaderPreviewComponent implements OnInit {
 
   @Input() preloadUserImg: string;
   @Input() url: string;
+  @Output() urlEvent = new EventEmitter<string>();
 
   constructor(
     private ng2ImgMax: Ng2ImgMaxService,
@@ -52,16 +53,12 @@ export class ImageUploaderPreviewComponent implements OnInit {
     );
   }
 
-  Upload() {
+  Upload(): void {
     const form = new FormData();
     form.append('avatar', this.uploadedImage);
     const subs = this.uploadS.UploadImage(this.url, form).subscribe(r => {
-      console.log(r);
-      subs.unsubscribe()
+      this.urlEvent.emit(r);
+      subs.unsubscribe();
     });
   }
-
-
-
-
 }

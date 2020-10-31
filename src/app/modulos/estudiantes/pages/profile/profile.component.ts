@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { environment } from 'src/environments/environment';
 import { PersonaEstudianteService } from '../../servicios/persona-estudiante.service';
 
 @Component({
@@ -25,9 +26,7 @@ export class ProfileComponent implements OnInit {
   });
 
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   Update(): void {
     console.log('Actualizando...');
@@ -40,6 +39,12 @@ export class ProfileComponent implements OnInit {
       subs.unsubscribe();
       document.querySelector('#BtnSave').innerHTML = 'Guardar';
     })
+  }
+
+  getProfileImgUrl(event): void {
+    console.log(event);
+    const url = `${environment.url}/${event}`;
+    this.authS.UserClass.UpdatePersonaImg({ url });
   }
 
 }

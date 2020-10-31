@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { ILocalStorageSegCatUsuario } from './core';
 
 export class User {
@@ -34,5 +35,10 @@ export class User {
         this.data.UserCopy.persona.apellidoPaterno = apellidoPaterno;
         this.data.UserCopy.persona.apellidoMaterno = apellidoMaterno;
         localStorage.setItem('user', JSON.stringify(this.data))
+    }
+
+    UpdatePersonaImg({ url }): void {
+        this.data.UserCopy.persona.imagen = url;
+        localStorage.setItem('user', JSON.stringify(this.data));
     }
 }
