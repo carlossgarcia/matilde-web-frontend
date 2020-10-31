@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, retry } from 'rxjs/operators';
-import { httpOptions } from '../classes/headers';
+import { HTTP_GENERAL_HEADERS } from '../classes/headers';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
 import { ILocalStorageSegCatUsuario } from '../classes/core';
@@ -19,18 +19,20 @@ export class AuthService {
   UserData: ILocalStorageSegCatUsuario;
   UserClass: User;
   Token: string;
+  headers = new HTTP_GENERAL_HEADERS();
 
   constructor(private http: HttpClient, public router: Router) {
     this.LoadAuthInformation();
   }
 
   Login(data: any) {
-    return this.http.post(environment.url + '/auth/login', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/login', data, this.headers.httpOptions).pipe(
       map((res: any) => {
         if (res.error) {
           return res;
         } else {
           this.Token = res.data.token;
+          this.headers.Token(res.data.token);
           this.UserData = this.jwtS.decodeToken(res.data.token);
           this.UserClass = new User(this.UserData);
           this.SaveAuthInformation();
@@ -43,7 +45,7 @@ export class AuthService {
   }
 
   Signup(data: any) {
-    return this.http.post(environment.url + '/auth/signup', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/signup', data, this.headers.httpOptions).pipe(
       map((res: any) => {
         return res;
       }),
@@ -52,7 +54,7 @@ export class AuthService {
   }
 
   VerifyPersonPreRegistration(data: any) {
-    return this.http.post(environment.url + '/auth/verify/person-reg', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/verify/person-reg', data, this.headers.httpOptions).pipe(
       map((res: any) => {
         return res;
       }),
@@ -61,7 +63,7 @@ export class AuthService {
   }
 
   CompleteRegister(data: any) {
-    return this.http.post(environment.url + '/auth/person-reg', data, httpOptions).pipe(
+    return this.http.post(environment.url + '/auth/person-reg', data, this.headers.httpOptions).pipe(
       map((res: any) => {
         return res;
       }),
@@ -110,7 +112,7 @@ export class AuthService {
    * Validamos que el token esté vigente
    */
   ValidateToken(): void {
-    const obs = this.http.post(environment.url + '/auth/validate-token', { token: this.Token }, httpOptions).pipe(
+    const obs = this.http.post(environment.url + '/auth/validate-token', { token: this.Token }, this.headers.httpOptions).pipe(
       map((res: any) => {
         console.log('Hola => ', res);
 
