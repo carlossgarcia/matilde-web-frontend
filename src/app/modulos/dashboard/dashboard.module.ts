@@ -10,6 +10,7 @@ import { RolesComponent } from './pages/usuarios/steps/roles/roles.component';
 import { AllComponent } from './pages/usuarios/steps/all/all.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DashboardRouting,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InfiniteScrollModule
   ]
 })
 export class DashboardModule { }
