@@ -1,74 +1,46 @@
-<div class="wrapper">
-  <div class="auth-content">
-    <div class="card animated fadeIn low">
-      <div class="card-body text-center">
-        <div class="mb-4">
-          <img
-            class="brand animated infinite pulse"
-            src="assets/img/logo.png"
-            alt="bootstraper logo"
-          />
-        </div>
-        <h5 class="mb-3 text-muted">Inicia sesión a tu cuenta</h5>
+<div class="wrapper bg-img">
+    <div class="auth-content">
+        <div class="card animated fadeIn low">
+            <div class="card-body text-center">
+                <div class="mb-4">
+                    <img class="brand animated infinite pulse" src="assets/img/logo.png" alt="bootstraper logo" />
+                </div>
+                <h5 class="mb-3 text-muted">Inicia sesión a tu cuenta</h5>
 
-        <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <input
-              formControlName="correo"
-              type="email"
-              class="form-control"
-              placeholder="Correo"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <input
-              formControlName="contrasena"
-              type="password"
-              class="form-control"
-              placeholder="Contraseña"
-              required
-            />
-          </div>
-          <div class="form-group text-left">
-            <div class="custom-control ml-1 mt-4 custom-checkbox">
-              <input
-                formControlName="recordarme"
-                type="checkbox"
-                name="remember"
-                class="custom-control-input"
-                value="false"
-                id="remember-me"
-              />
-              <!-- <label class="custom-control-label" for="remember-me"
-                >Recordarme</label
-              > -->
+                <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <input formControlName="correo" type="email" class="form-control" placeholder="Correo" required />
+                    </div>
+                    <div class="form-group">
+                        <input formControlName="contrasena" type="password" class="form-control" placeholder="Contraseña" required />
+                    </div>
+                    <div class="form-group text-left">
+                        <div class="custom-control ml-1 mt-4 custom-checkbox">
+                            <input formControlName="recordarme" type="checkbox" name="remember" class="custom-control-input" value="false" id="remember-me" />
+                            <!-- <label class="custom-control-label" for="remember-me"
+                              >Recordarme</label
+                            > -->
+                        </div>
+                    </div>
+                    <button [disabled]="!LoginForm.valid" id="LoginBtn" type="submit" class="btn w-75 bg-blue text-white shadow-2 mt-4 mb-4">
+                      Inicia sesión
+                    </button>
+
+                    <div *ngIf="LoginError" class="alert alert-danger">
+                        <h5 class="alert-title">
+                            <i class="fas fa-exclamation-triangle"></i> Error
+                        </h5>
+                        {{ LoginMsg }}
+                    </div>
+                </form>
+                <p class="mb-2 text-muted">
+                    ¿Olvidaste tu Contraseña?
+                    <a class="color-blue" routerLink="/forgot-password">Reestablece tu contraseña</a>
+                </p>
+                <p class="mb-0 text-muted">
+                    ¿Aún no tienes una cuenta? <a class="color-blue" routerLink="/signup">Regístrate</a>
+                </p>
             </div>
-          </div>
-          <button
-            [disabled]="!LoginForm.valid"
-            id="LoginBtn"
-            type="submit"
-            class="btn w-75 bg-blue text-white shadow-2 mt-4 mb-4"
-          >
-            Inicia sesión
-          </button>
-
-          <div *ngIf="LoginError" class="alert alert-danger">
-            <h5 class="alert-title">
-              <i class="fas fa-exclamation-triangle"></i> Error
-            </h5>
-            {{ LoginMsg }}
-          </div>
-        </form>
-        <p class="mb-2 text-muted">
-          ¿Olvidaste tu Contraseña?
-          <a class="color-blue" routerLink="/forgot-password">Reestablece tu contraseña</a>
-        </p>
-        <p class="mb-0 text-muted">
-          ¿Aún no tienes una cuenta? <a class="color-blue" routerLink="/signup">Regístrate</a>
-        </p>
-      </div>
+        </div>
     </div>
-  </div>
 </div>

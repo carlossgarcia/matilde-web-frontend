@@ -1,13 +1,11 @@
-.app-logo{
+.app-logo {
     width: 11rem;
     margin-top: -2rem !important;
 }
 
-
 #body>.navbar {
     border-bottom: none !important;
     min-height: 4.5rem !important;
-
 }
 
 #sidebar .sidebar-header {
@@ -17,9 +15,14 @@
 }
 
 #sidebar {
-    border-right:none !important;
+    border-right: none !important;
     // border-right: 1px solid #e6ecf5;
 }
+
+.li-sidebar {
+    margin-bottom: 1rem;
+}
+
 // .content{
 //     padding-right: 0 !important;
 //     padding-left: 0 !important;

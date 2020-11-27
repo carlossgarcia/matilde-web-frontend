@@ -8,6 +8,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { PersonRegComponent } from './pages/signup/steps/person-reg/person-reg.component';
+import { TerminosCondicionesComponent } from './pages/terminos-condiciones/terminos-condiciones.component';
+import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent
+  },
+  {
+    path: 'terminos-condiciones',
+    component: TerminosCondicionesComponent
+  },
+  {
+    path: 'aviso-privacidad',
+    component: AvisoPrivacidadComponent
   },
   {
     path: 'estudiantes',

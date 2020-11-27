@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
+
 @NgModule({
   declarations: [DashboardComponent, HomeComponent, InstitucionesComponent, UsuariosComponent, LicenciasComponent, RolesComponent, AllComponent],
   imports: [

@@ -1,67 +1,64 @@
-<div class="wrapper">
-  <nav id="sidebar" class="">
-    <div class="sidebar-header">
-      <img src="assets/img/bootstraper-logo.png" alt="bootraper logo" class="app-logo" />
-    </div>
-    <ul class="list-unstyled components text-secondary">
-      <li *ngFor="let route of htmlRoutes">
-        <a [routerLink]="route.route"><i [ngClass]="route.icon"></i> {{route.name}} </a>
-      </li>
-    </ul>
-  </nav>
-  <div id="body" class="active">
-    <nav class="navbar navbar-expand-lg navbar-white bg-white">
-      <button type="button" id="sidebarCollapse" class="btn default-secondary-menu">
+<div class="wrapper bg-img">
+    <nav id="sidebar" class="">
+        <div class="sidebar-header">
+            <img src="assets/img/bootstraper-logo.png" alt="bootraper logo" class="app-logo" />
+        </div>
+        <ul class="list-unstyled components text-secondary">
+            <li *ngFor="let route of htmlRoutes">
+                <a [routerLink]="route.route"><i [ngClass]="route.icon"></i> {{route.name}} </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="body" class="active">
+        <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <button type="button" id="sidebarCollapse" class="btn default-secondary-menu">
         <i class="fas fa-bars"></i><span></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav ml-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
 
-          <li *ngIf="authS.UserClass.IsAdmin" class="nav-item dropdown">
-            <div class="nav-dropdown">
-              <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i
-                  class="fas fa-link mr-2"></i> <span>Enlaces rápidos</span> <i style="font-size: .8em;"
-                  class="fas fa-caret-down"></i></a>
-              <div class="dropdown-menu dropdown-menu-right nav-link-menu">
-                <ul class="nav-list">
-                  <li *ngFor="let m of authS.UserClass.FormatedModules">
-                    <a [routerLink]="m.ruta" class="dropdown-item"><i [ngClass]="m.icono"></i> {{m.nombre}}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
+                    <li *ngIf="authS.UserClass.IsAdmin" class="nav-item dropdown">
+                        <div class="nav-dropdown">
+                            <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i
+                            class="fas fa-link mr-2"></i> <span>Enlaces rápidos</span> <i style="font-size: .8em;"
+                            class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                <ul class="nav-list">
+                                    <li *ngFor="let m of authS.UserClass.FormatedModules">
+                                        <a [routerLink]="m.ruta" class="dropdown-item"><i [ngClass]="m.icono"></i> {{m.nombre}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
 
-          <li class="nav-item dropdown">
-            <div class="nav-dropdown">
-              <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i
-                  class="fas fa-user mr-2"></i>
-                <span>{{
-                  authS.UserClass.FormatedName
-                }}</span>
-                <i style="font-size: 0.8em" class="fas fa-caret-down"></i></a>
-              <div class="dropdown-menu dropdown-menu-right nav-link-menu">
-                <ul class="nav-list">
-                  <li>
-                    <a routerLink="" class="dropdown-item"><i class="m.icono"></i>
-                    </a>
-                  </li>
-                  <div class="dropdown-divider"></div>
-                  <li>
-                    <a (click)="authS.DestroySessionInformation()" class="dropdown-item"><i
-                        class="fas fa-sign-out-alt"></i> Salir
-                    </a>
-                  </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-dropdown">
+                            <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown">
+                                <i class="fas fa-user mr-2"></i>
+                                <span>{{ authS.UserClass.FormatedName }}</span>
+                                <i style="font-size: 0.8em" class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                <ul class="nav-list">
+                                    <li>
+                                        <a routerLink="" class="dropdown-item"><i class="m.icono"></i></a>
+                                    </li>
+                                    <div class="dropdown-divider"></div>
+                                    <li>
+                                        <a (click)="authS.DestroySessionInformation()" class="dropdown-item"><i
+                                            class="fas fa-sign-out-alt"></i> Salir
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-              </div>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="content">
-      <router-outlet></router-outlet>
+        </nav>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
     </div>
-  </div>
 </div>

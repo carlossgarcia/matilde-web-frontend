@@ -5,6 +5,10 @@ import { AppComponent } from './pages/app/app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { TemarioComponent } from './pages/temario/temario.component';
 
 const routes: Routes = [
   {
@@ -26,6 +30,22 @@ const routes: Routes = [
       {
         path: 'settings',
         component: SettingsComponent
+      },
+      {
+        path: 'contacto',
+        component: ContactoComponent
+      },
+      {
+        path: 'faq',
+        component: FaqComponent
+      },
+      {
+        path: 'quienes-somos',
+        component: QuienesSomosComponent
+      },
+      {
+        path: 'temario',
+        component: TemarioComponent
       },
       { path: '', redirectTo: '/estudiantes/home', pathMatch: 'full' },
     ]
