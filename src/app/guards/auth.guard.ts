@@ -24,7 +24,7 @@ export class AuthGuard implements CanActivate {
       if (route.url.join('') === 'estudiantes') {
         return true;
       } else {
-        if (route.url.join('') === 'dashboard' && this.authService.UserData.UserCopy.roles.map(r => r.nombre).includes('administrador')) {
+        if (route.url.join('') === 'dashboard' && this.authService.UserData.UserCopy.roles.map(r => r.rol.nombre).includes('administrador')) {
           return true;
         } else {
           this.router.navigateByUrl('/login');
