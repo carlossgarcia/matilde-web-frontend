@@ -9,6 +9,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { PersonRegComponent } from './pages/signup/steps/person-reg/person-reg.component';
+import { TerminosCondicionesComponent } from './pages/terminos-condiciones/terminos-condiciones.component';
+import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'password-reset/:token',
     component: ResetPasswordComponent
+  },
+  {
+    path: 'terminos-condiciones',
+    component: TerminosCondicionesComponent
+  },
+  {
+    path: 'aviso-privacidad',
+    component: AvisoPrivacidadComponent
   },
   {
     path: 'estudiantes',

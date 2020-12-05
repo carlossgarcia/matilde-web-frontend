@@ -12,12 +12,14 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { PersonRegComponent } from './pages/signup/steps/person-reg/person-reg.component';
+import { TerminosCondicionesComponent } from './pages/terminos-condiciones/terminos-condiciones.component';
 import { Err404Component } from './pages/error/err404/err404.component';
 import { Err500Component } from './pages/error/err500/err500.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpErrorInterceptor } from './services/http-error.interceptor';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
     Err404Component,
     Err500Component,
     ResetPasswordComponent,
+    TerminosCondicionesComponent,
+    AvisoPrivacidadComponent
   ],
   imports: [
     BrowserModule,

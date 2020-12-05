@@ -1,0 +1,76 @@
+<div class="container animated fadeIn">
+
+    <div class="card bg-blue mt-4">
+        <div class="card-body">
+            <h5 class="p-0 m-0 text-white text-center">
+                PREGUNTAS FRECUENTES
+            </h5>
+        </div>
+    </div>
+
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="heading4">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                        ¿Donde puedo ver los próximos temas de la aplicación?
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+                <div class="card-body">
+                    Constantemente estamos actualizando e integrando temas nuevos a la aplicación. Puedes verlo a traves del temario que se encuentra en el menu lateral izquierdo, o <a [routerLink]="['/estudiantes/temario']">haz click aquí.</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Se puede usar la plataforma sin conexión a internet una vez que se acceda?
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    En un principio, si.
+                    <br><br> Si el usuario ya esta dentro de la aplicación y esta se encuentra cargada correctamente, podremos ver los modelos sin conexión sin problema alguno.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        No puedo ver un modelo, ¿que debo hacer para ver el modelo?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Primero hay que confirmar que nuestra licencia de uso se encuentre activa, si el caso es correcto lo siguiente seria verificar nuestra conexión a internet en alguna otra web. <br><br> <br> Si el problema persiste, conectactenos al
+                    correo hola@dritdi.mx y resolveremos el problema cuando antes.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        No carga la aplicación una vez accesando, ¿qué pasa?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    En caso de que la aplicación no cargue, posiblemente tenemos un dispositivo no compatible con WebGL, Como es el caso de algunos smartphones antiguos o una versión de internet explorer menor a la 11.
+                    <br><br> También debemos verificar nuestra conexion a internet en alguna otra web.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="text-center text-white pt-3">¿Tienes otro problema? Contactanos al correo hola@dritdi.mx y trataremos de resolverlo lo antes posible.</p>
+</div>

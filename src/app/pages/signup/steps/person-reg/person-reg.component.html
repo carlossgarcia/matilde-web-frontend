@@ -1,103 +1,69 @@
-<div class="wrapper">
-  <div class="auth-content">
-    <div class="card animated fadeIn">
-      <div class="card-body text-center">
-        <div class="mb-4">
-          <img
-            class="brand animated infinite pulse"
-            src="assets/img/logo.png"
-            alt="bootstraper logo"
-          />
+<div class="wrapper bg-img">
+    <div class="auth-content">
+        <div class="card animated fadeIn">
+            <div class="card-body text-center">
+                <div class="mb-4">
+                    <img class="brand animated infinite pulse" src="assets/img/logo.png" alt="bootstraper logo" />
+                </div>
+                <h5 class="mb-4 text-muted">Complementa tus datos</h5>
+
+                <form [formGroup]="PersonaRegForm">
+                    <div class="form-group">
+                        <input formControlName="usuario" type="text" class="form-control" placeholder="Nombre de usuario *" required />
+                    </div>
+                    <div class="form-group">
+                        <input formControlName="nombre" type="text" class="form-control" placeholder="Nombre *" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input formControlName="apellidopa" type="text" class="form-control" placeholder="Apellido Paterno *" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input formControlName="apellidoma" type="text" class="form-control" placeholder="Apellido Materno *" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input formControlName="fechaNacim" type="date" id="nacimiento" class="form-control" placeholder="Fecha nacimiento *" required />
+                    </div>
+                    <div class="form-group text-left">
+                        <label for="genero">
+                          Seleccione su género:
+                        </label>
+                        <div id="genero" class="form-check">
+                            <input formControlName="genero" type="radio" class="form-check-input" id="radio-masculino" value="true" placeholder="Hombre *" required />
+                            <label class="form-check-label" for="radio-masculino">
+                              Hombre
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input formControlName="genero" type="radio" class="form-check-input" id="radio-femenino" value="false" placeholder="Mujer *" required />
+                            <label class="form-check-label" for="radio-femenino">
+                              Mujer
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input formControlName="genero" type="radio" class="form-check-input" id="radio-no-escoger" value="null" placeholder="" required />
+                            <label class="form-check-label" for="radio-no-escoger">
+                              Prefiero no escoger
+                            </label>
+                        </div>
+                    </div>
+                    <button [disabled]="!PersonaRegForm.valid" id="SignupBtn" type="button" class="btn w-75 bg-blue text-white shadow-2 mt-4 mb-4">
+                      Terminar registro
+                    </button>
+
+                    <div *ngIf="PersonaRegError" class="alert alert-danger">
+                        <h5 class="alert-title">
+                            <i class="fas fa-exclamation-triangle"></i> Error
+                        </h5>
+                        {{ PersonaRegMsg }}
+                    </div>
+                </form>
+                <p class="mb-0 text-muted">
+                    ¿Ya tienes una cuenta? <a class="color-blue" href="login">Iniciar sesión</a>
+                </p>
+            </div>
         </div>
-        <h5 class="mb-4 text-muted">Complementa tus datos</h5>
-
-        <form [formGroup]="PersonaRegForm">
-          <div class="form-group">
-            <input
-              formControlName="usuario"
-              type="text"
-              class="form-control"
-              placeholder="Nombre de usuario *"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <input
-              formControlName="nombre"
-              type="text"
-              class="form-control"
-              placeholder="Nombre *"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <input
-              formControlName="apellidopa"
-              type="text"
-              class="form-control"
-              placeholder="Apellido Paterno *"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <input
-              formControlName="apellidoma"
-              type="text"
-              class="form-control"
-              placeholder="Apellido Materno *"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="nacimiento">Fecha de nacimiento</label>
-            <input formControlName="fechaNacim" type="date" id="nacimiento" class="form-control" placeholder="Fecha nacimiento *" required />
-          </div>
-          <div class="form-group text-left">
-            <label for="genero">
-              Seleccione su género:
-            </label>
-            <div id="genero" class="form-check">
-              <input formControlName="genero" type="radio" class="form-check-input" id="radio-masculino" value="true" placeholder="Hombre *" required />
-              <label class="form-check-label" for="radio-masculino">
-                Hombre
-              </label>
-            </div>
-            <div class="form-check">
-              <input formControlName="genero" type="radio" class="form-check-input" id="radio-femenino" value="false" placeholder="Mujer *" required />
-              <label class="form-check-label" for="radio-femenino">
-                Mujer
-              </label>
-            </div>
-            <div class="form-check">
-              <input formControlName="genero" type="radio" class="form-check-input" id="radio-no-escoger" value="null"
-                placeholder="" required />
-              <label class="form-check-label" for="radio-no-escoger">
-                Prefiero no escoger
-              </label>
-            </div>
-          </div>
-          <button
-            [disabled]="!PersonaRegForm.valid"
-            id="SignupBtn"
-            type="button"
-            class="btn w-75 bg-blue text-white shadow-2 mt-4 mb-4"
-          >
-            Terminar registro
-          </button>
-
-          <div *ngIf="PersonaRegError" class="alert alert-danger">
-            <h5 class="alert-title">
-              <i class="fas fa-exclamation-triangle"></i> Error
-            </h5>
-            {{ PersonaRegMsg }}
-          </div>
-        </form>
-        <p class="mb-0 text-muted">
-          ¿Ya tienes una cuenta? <a class="color-blue" href="login">Iniciar sesión</a>
-        </p>
-      </div>
     </div>
-  </div>
 </div>

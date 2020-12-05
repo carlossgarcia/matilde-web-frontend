@@ -5,200 +5,203 @@
 
 /*IMPORTAR IONIC ICONS*/
 
+.bg-img {
+    background-image: url('/assets/img/bg.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 500px;
+}
+
 .material-icons {
-  display: inline-flex;
-  vertical-align: middle;
+    display: inline-flex;
+    vertical-align: middle;
 }
 
 .svg-inline--fa {
-  margin-right: 0.35rem !important;
+    margin-right: 0.35rem !important;
 }
 
 .low {
-  animation-duration: 3s !important;
+    animation-duration: 3s !important;
 }
 
 .center {
-  text-align: center !important;
-  align-content: center;
-  display: block !important;
-  margin: auto !important;
+    text-align: center !important;
+    align-content: center;
+    display: block !important;
+    margin: auto !important;
 }
 
 .ws-normal {
-  white-space: normal;
+    white-space: normal;
 }
 
 .t-break {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 //PALETA DE COLORES
 .bg-smoke {
-  background-color: #efefef !important;
+    background-color: #efefef !important;
 }
 
 .bg-gray {
-  background-color: #f5f5f5 !important;
+    background-color: #f5f5f5 !important;
 }
 
 .bg-hard-gray {
-  background-color: #7d8791 !important;
+    background-color: #7d8791 !important;
 }
 
 .bg-ligth-gray {
-  background-color: #d2dbe4 !important;
+    background-color: #d2dbe4 !important;
 }
 
 .bg-dark {
-  background-color: #1c242d !important;
+    background-color: #1c242d !important;
 }
 
 .bg-blue {
-  background-color: #457bad !important;
+    background-color: #457bad !important;
 }
 
 .color-dark {
-  color: #1c242d !important;
+    color: #1c242d !important;
 }
 
 .color-blue {
-  color: #457bad !important;
+    color: #457bad !important;
 }
 
 .imgcenter {
-  margin: auto !important;
-  display: block !important;
+    margin: auto !important;
+    display: block !important;
 }
 
 .none-padding {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 .pointer {
-  cursor: pointer !important;
+    cursor: pointer !important;
 }
 
 .smoke {
-  background-color: #fafafa;
+    background-color: #fafafa;
 }
 
 .text-smoke {
-  color: #efefef !important;
+    color: #efefef !important;
 }
 
 .text-aqua {
-  color: #6da7dd !important;
+    color: #6da7dd !important;
 }
 
 .disabled {
-  color: #dddddd !important;
-  cursor: not-allowed !important;
-  transition: unset !important;
+    color: #dddddd !important;
+    cursor: not-allowed !important;
+    transition: unset !important;
 }
 
 .disabled:hover {
-  transform: unset !important;
-  color: #dddddd !important;
+    transform: unset !important;
+    color: #dddddd !important;
 }
 
-.btn-unset {
-}
+.btn-unset {}
 
 // -------------------------------------------------------- Estilo del checkbox y forms material -------------------------------------------------------- //
 .form-control {
-  // background-image: linear-gradient( 0deg, #a01f41 2px, rgba(255, 255, 255, 0) 0);
-  // background-image: linear-gradient(0deg, #457bad 2px, rgba(213, 0, 0, 0) 0), linear-gradient(0deg, rgba(0, 0, 0, .26) 1px, transparent 0) !important;
+    // background-image: linear-gradient( 0deg, #a01f41 2px, rgba(255, 255, 255, 0) 0);
+    // background-image: linear-gradient(0deg, #457bad 2px, rgba(213, 0, 0, 0) 0), linear-gradient(0deg, rgba(0, 0, 0, .26) 1px, transparent 0) !important;
 }
 
 .radio label .bmd-radio:before,
 label.radio-inline .bmd-radio:before {
-  background-color: #457bad !important;
+    background-color: #457bad !important;
 }
 
-.radio label input[type="radio"]:checked ~ .bmd-radio:after,
-label.radio-inline input[type="radio"]:checked ~ .bmd-radio:after {
-  border-color: #457bad !important;
+.radio label input[type="radio"]:checked~.bmd-radio:after,
+label.radio-inline input[type="radio"]:checked~.bmd-radio:after {
+    border-color: #457bad !important;
 }
 
-.checkbox
-  label
-  input[type="checkbox"]:checked
-  + .checkbox-decorator
-  .check:before,
-label.checkbox-inline
-  input[type="checkbox"]:checked
-  + .checkbox-decorator
-  .check:before {
-  color: #457bad !important;
+.checkbox label input[type="checkbox"]:checked+.checkbox-decorator .check:before,
+label.checkbox-inline input[type="checkbox"]:checked+.checkbox-decorator .check:before {
+    color: #457bad !important;
 }
 
-.checkbox label input[type="checkbox"]:checked + .checkbox-decorator .check,
-label.checkbox-inline
-  input[type="checkbox"]:checked
-  + .checkbox-decorator
-  .check {
-  border-color: #457bad !important;
+.checkbox label input[type="checkbox"]:checked+.checkbox-decorator .check,
+label.checkbox-inline input[type="checkbox"]:checked+.checkbox-decorator .check {
+    border-color: #457bad !important;
 }
+
 .bmd-form-group .bmd-label-static,
 .bmd-form-group.is-filled .bmd-label-floating,
 .bmd-form-group .is-filled .bmd-label-floating,
 .bmd-form-group.is-focused .bmd-label-floating,
 .bmd-form-group .is-focused .bmd-label-floating {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 //Spinner loading
 @keyframes spinner-border {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .spinner-border {
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  vertical-align: text-bottom;
-  border: 0.25em solid currentColor;
-  border-right-color: transparent;
-  border-radius: 50%;
-  -webkit-animation: spinner-border 0.75s linear infinite !important;
-  animation: spinner-border 0.75s linear infinite !important;
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: text-bottom;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border 0.75s linear infinite !important;
+    animation: spinner-border 0.75s linear infinite !important;
 }
 
+
 /* ////////////////////////////////////////////////////BREAKPOINTS//////////////////////////////////////////////////// */
+
 
 /* VISTA MOVIL VERTICAL*/
 
 @media screen and (min-width: 0px) and (max-width: 599px) {
-  .d-sm-none {
-    display: none !important;
-  }
+    .d-sm-none {
+        display: none !important;
+    }
 }
+
 
 /* FIN VISTA MOVIL VERTICAL*/
 
+
 /* VISTA MOVIL HORIZONTAL*/
 
-@media screen and (min-width: 600px) and (max-width: 760px) {
-}
+@media screen and (min-width: 600px) and (max-width: 760px) {}
+
 
 /* FIN VISTA MOVIL HORIZONTAL*/
 
+
 /* VISTA IPAD/TABLET VERTICAL*/
 
-@media screen and (min-width: 761px) and (max-width: 999px) {
-}
+@media screen and (min-width: 761px) and (max-width: 999px) {}
+
 
 /* FIN VISTA IPAD/TABLET VERTICAL*/
 
+
 /* VISTA IPAD/TABLETS HORIZONTAL */
 
-@media screen and (min-width: 1000px) and (max-width: 1250px) {
-}
+@media screen and (min-width: 1000px) and (max-width: 1250px) {}
+
 
 /* FIN VISTA IPAD/TABLETS HORIZONTAL */

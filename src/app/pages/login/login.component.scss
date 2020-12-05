@@ -6,6 +6,7 @@
 * Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
 -------------------------------------------------------------------*/
 
+
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -15,6 +16,7 @@
 4. Miscellaneous
 5. Adjustments to dafault behaviors
 -------------------------------------------------------------------*/
+
 
 /*------------------------------------------------------------------
 [1. Body / #body]
@@ -39,11 +41,8 @@ body {
     overflow: hidden;
     min-width: 100%;
     min-height: 100vh;
-    // background-image: url('/assets/img/logo.png');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
 }
+
 
 /*------------------------------------------------------------------
 [2. Contents / #auth-content]
@@ -55,6 +54,7 @@ body {
     padding: 15px;
     z-index: 5;
 }
+
 
 /*------------------------------------------------------------------
 [3. Cards / .card]
@@ -69,7 +69,8 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-.auth-content .card .card-block, .auth-content .card .card-body {
+.auth-content .card .card-block,
+.auth-content .card .card-body {
     padding: 30px 25px;
 }
 
@@ -81,6 +82,7 @@ body {
     padding: 10px 15px;
     height: 42px;
 }
+
 
 /*------------------------------------------------------------------
 [4. Miscellaneous]
@@ -94,6 +96,7 @@ body {
 p.text-muted {
     font-size: 13px;
 }
+
 
 /*------------------------------------------------------------------
 [5. Adjustments to dafault behaviors]
@@ -109,10 +112,11 @@ p.text-muted {
     transition: all 0.3s ease-in-out;
 }
 
-.wrapper a, .wrapper p>a {
+.wrapper a,
+.wrapper p>a {
     font-weight: 600;
 }
 
-.brand{
+.brand {
     width: 50%;
 }
