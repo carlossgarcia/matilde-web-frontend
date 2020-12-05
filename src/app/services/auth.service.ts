@@ -125,4 +125,21 @@ export class AuthService {
       subs.unsubscribe();
     });
   }
+
+  ForgotPassword(data: any) {
+    return this.http.post(environment.url + '/auth/forgot-password', data, this.headers.httpOptions).pipe(
+      map((res: any) => {
+        return res;
+      }),
+      retry(1)
+    );
+  }
+  ResetPassword(data: any) {
+    return this.http.post(environment.url + '/auth/reset-password', data, this.headers.httpOptions).pipe(
+      map((res: any) => {
+        return res;
+      }),
+      retry(1)
+    );
+  }
 }

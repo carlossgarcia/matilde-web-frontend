@@ -17,6 +17,7 @@ import { Err500Component } from './pages/error/err500/err500.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpErrorInterceptor } from './services/http-error.interceptor';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpErrorInterceptor } from './services/http-error.interceptor';
     PersonRegComponent,
     Err404Component,
     Err500Component,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,

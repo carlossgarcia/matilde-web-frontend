@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotPasswordComponent implements OnInit {
 
-  constructor() { }
+  ForgotPasswordForm = new FormGroup({
+    email: new FormControl()
+  });
+
+  result = {
+    error: false,
+    msg: ''
+  };
+
+  constructor(private authServ: AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  Send() {
+    const s = this.authServ.ForgotPassword(this.ForgotPasswordForm.value).subscribe(r => {
+      this.result = r;
+      s.unsubscribe();
+    });
   }
 
 }
