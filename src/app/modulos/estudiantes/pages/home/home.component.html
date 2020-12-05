@@ -1,20 +1,129 @@
-<div class="container animated fadeIn low">
-  <div class="row justify-content-center">
-    <div class="col-12 my-1 animated bounceIn">
-      <h5 class="text-white text-center text-uppercase">¡Bienvenido! {{authS.UserClass.FormatedName}}</h5>
-    </div>
-    <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-9">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title text-center">{{authS.UserClass.Greetings}}</h5>
-          <p class="card-text text-center">
-            Aquí podrás estudiar variados temas relacionados con la salud. ¡Empecemos!
-          </p>
-          <a routerLink="/estudiantes/app" class="btn color-blue m-auto d-block text-center animated infinite pulse">Ir a la aplicación</a>
+<!-- <div class="container animated fadeIn low">
+    <div class="row justify-content-center">
+        <div class="col-12 my-1 animated bounceIn">
+            <h5 class="text-white text-center text-uppercase">¡Bienvenido! {{authS.UserClass.FormatedName}}</h5>
         </div>
-        <img class="card-img-top" src="assets/img/flayer-recortado.png" alt="Card image cap">
+        <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-9">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{authS.UserClass.Greetings}}</h5>
+                    <p class="card-text text-center">
+                        Aquí podrás estudiar variados temas relacionados con la salud. ¡Empecemos!
+                    </p>
+                    <a routerLink="/estudiantes/app" class="btn color-blue m-auto d-block text-center animated infinite pulse">Ir a la aplicación</a>
+                </div>
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div> -->
+
+<!-- Page Content -->
+<div class="container animated fadeIn low">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+        <div class="col-lg-5">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="./assets/img/craneo.gif" alt="">
+        </div>
+        <div class="col-lg-7">
+            <h1 class="font-weight-light text-white">¡Bienvenido a Dritdi <br> {{authS.UserClass.FormatedName | titlecase }}!</h1>
+            <p class="text-white">
+                Dritdi es el futuro de la educación: <br> <br> ¡Permite a los estudiantes y maestros la observación de 3D en materia cientifica como AnatomÍa, Biología, Microbiología, y mucho más!
+            </p>
+            <a routerLink="/estudiantes/app" class="btn bg-blue text-white text-center animated infinite pulse w-100">Ir a la aplicación</a>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="card bg-dark text-white my-5 py-2 text-center">
+        <div class="card-bod text-center">
+            <p class="m-0">
+                Aquí podrás estudiar variados temas relacionados con la salud. ¡Empecemos!
+            </p>
+        </div>
+    </div>
+
+    <h4 class="text-center pb-3 text-white">Beneficios de Dritdi:</h4>
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100 bg-blue">
+                <img class="w-50 m-auto card-desc" src="./assets/img/vr.png">
+                <div class="card-body text-white">
+                    <h2 class="card-title text-center">
+                        Modelos 3D Inmersivos
+                    </h2>
+                    <p class="card-text text-justify">
+                        La observación tridimensional de las partes anatómicas incrementa el aprendizaje y la comprsión de la forma de un entorno realista que facilita la asimilación de la información.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-5">
+            <div class="card h-100 bg-blue">
+                <img class="w-50 m-auto card-desc" src="./assets/img/descripcion.png">
+                <div class="card-body text-white">
+                    <h2 class="card-title text-center">
+                        Información Interactiva
+                    </h2>
+                    <p class="card-text text-justify">
+                        De manera complementaria, tenemos una descripción del modelo tridimencional que permite el aprendizaje teórico. De esta forma reforzamos el estudio teórico con el interactivo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-5">
+            <div class="card h-100 bg-blue">
+                <img class="w-50 m-auto card-desc" src="./assets/img/360.png">
+                <div class="card-body text-white">
+                    <h2 class="card-title text-center">
+                        Control de Navegación
+                    </h2>
+                    <p class="card-text text-justify">
+                        Aprende a tu ritmo. Controla la velocidad de navegación, para pausarlo o continuar. Esto te permite inspeccionar en detalle cualquier estructura o incluso verlo en 360º
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="text-center pb-3 text-white">¿Como usar Dritdi?</h4>
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <p class="card-text text-justify">
+                        Asegurate de tener una licencia de estuiante activa o contacta a hola@dritdi.mx, navega hacia la pagina
+                        <a href="http://www.dritdi.mx" target="_blank">Dritdi.mx</a> e inicia sesión. En la página de inicio haz click en "Ir a la aplicación", espera a que el contenido cargue y comienza a aprender.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <p class="card-text text-justify">
+                        Una vez dentro de la aplicación puedes navegar dentro de los diferentes temas y seleccionar el modelo 3d de tu interes. Constantemente estamos añadiendo nuevos temas y modelo a nuestra aplicación, puedes consultar los próximos temas en la sección "Temario".
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <p class="card-text text-justify">
+                        Piedes interactuar con el modelo 3D dejando el click izquierdo presionado en el modelo y moviendo el mouse, de esta manera puedes explorar cada parte del modelo 3D, en algunos modelos puede haber diferentes botones y efectos que permiten una mejor interacción.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- /.container -->
