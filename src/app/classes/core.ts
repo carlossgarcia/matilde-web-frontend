@@ -32,13 +32,24 @@ export interface IRolesUsuario {
     activo: boolean;
     cveRol: number;
     nombre: string;
+    rol: ISegCatRol;
+}
+
+export interface ISegCatRol {
+    activo: boolean;
+    cveRol: number;
+    nombre: string;
 }
 
 export interface IModulosUsuario {
-    activo: boolean;
-    cveModulo: number;
-    cvePersonaReg: number;
-    nombre: string;
-    ruta: string;
-    icono: string;
+    activo: boolean,
+    id: number;
+    modulo: {
+        activo: boolean;
+        cveModulo: number;
+        cvePersonaReg: number;
+        nombre: string;
+        ruta: string;
+        icono: string;
+    }
 }

@@ -23,11 +23,11 @@ export class User {
     }
 
     get IsAdmin(): boolean {
-        return this.data.UserCopy.roles.map(r => r.nombre).includes('administrador');
+        return this.data.UserCopy.roles.map(r => r.rol.nombre).includes('administrador');
     }
 
     get FormatedModules(): Array<{ nombre: string, ruta: string, icono: string }> {
-        return this.data.UserCopy.modulos.map(m => ({ nombre: m.nombre, ruta: m.ruta, icono: m.icono }));
+        return this.data.UserCopy.modulos.map(m => ({ nombre: m.modulo.nombre, ruta: m.modulo.ruta, icono: m.modulo.icono }));
     }
 
     UpdatePersona({ nombre, apellidoPaterno, apellidoMaterno }): void {
