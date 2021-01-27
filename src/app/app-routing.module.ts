@@ -44,8 +44,7 @@ const routes: Routes = [
   },
   {
     path: 'estudiantes',
-    loadChildren: () => import('./modulos/estudiantes/estudiantes.module').then(m => m.EstudiantesModule),
-    canActivate: [AuthGuard]
+    loadChildren: () => import('./modulos/estudiantes/estudiantes.module').then(m => m.EstudiantesModule) 
   },
   {
     path: 'dashboard',

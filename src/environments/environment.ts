@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost:3001',
-  // url: 'https://dritdi.mx',
+  // url: 'http://localhost:3001',
+  url: 'https://dritdi.mx',
 };
 
 /*

@@ -50,7 +50,11 @@ export class LoginComponent implements OnInit {
             if (result.data.action === 'redirect') {
               setTimeout(() => {
                 this.authService.isLoggedIn = true;
-                this.router.navigateByUrl(result.data.url);
+                if(result.data.url == '/estudiantes'){
+                  this.router.navigate(['/estudiantes/app'])
+                }else{
+                  this.router.navigateByUrl(result.data.url);
+                }
               }, 1000);
             }
           }

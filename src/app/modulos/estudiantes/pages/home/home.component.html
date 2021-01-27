@@ -27,7 +27,9 @@
             <img class="img-fluid rounded mb-4 mb-lg-0" src="./assets/img/craneo.gif" alt="">
         </div>
         <div class="col-lg-7">
-            <h1 class="font-weight-light text-white">¡Bienvenido a Dritdi <br> {{authS.UserClass.FormatedName | titlecase }}!</h1>
+            <h1 *ngIf="authS.isLoggedIn" class="font-weight-light text-white">¡Bienvenido a Dritdi <br> {{authS.UserClass.FormatedName | titlecase }}!</h1>
+            <h1 *ngIf="!authS.isLoggedIn" class="font-weight-light text-white">¡Bienvenido a Dritdi!</h1>
+
             <p class="text-white">
                 Dritdi es el futuro de la educación: <br> <br> ¡Permite a los estudiantes y maestros la observación de 3D en materia cientifica como AnatomÍa, Biología, Microbiología, y mucho más!
             </p>

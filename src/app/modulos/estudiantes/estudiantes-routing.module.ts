@@ -9,6 +9,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { TemarioComponent } from './pages/temario/temario.component';
+import { AuthGuard } from '../../guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -21,15 +22,18 @@ const routes: Routes = [
       },
       {
         path: 'profile',
-        component: ProfileComponent
+        component: ProfileComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'app',
-        component: AppComponent
+        component: AppComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'settings',
-        component: SettingsComponent
+        component: SettingsComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'contacto',
