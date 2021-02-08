@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UnityCache } from 'src/app/classes/unity-cache';
 declare var UnityLoader: any;
 declare var UnityProgress: any;
 
@@ -10,17 +11,22 @@ declare var UnityProgress: any;
 export class UnityComponent implements OnInit {
 
   unityInstance: any;
+  buildJsonUrl = 'assets/unity/Build/build.json';
 
   constructor() {
 
   }
 
   ngOnInit(): void {
+    // const cache = new UnityCache(this.buildJsonUrl);
+    // En este punto los assets están guardados en el servidor
     this.unityInstance = UnityLoader.instantiate(
       'unityContainer',
-      'assets/unity/Build/build.json',
+      this.buildJsonUrl,
       { onProgress: this.UnityProgress }
     );
+    // console.log(UnityLoader);
+
   }
 
   UnityProgress(unityInstance, progress) {
