@@ -16,22 +16,22 @@
                 <img src="./assets/img/img-01.png" alt="IMG">
             </div>
 
-            <form class="contact100-form validate-form">
+            <form ngForm #form="ngForm" ngNativeValidate (ngSubmit)="mail(form)" class="contact100-form validate-form">
                 <span class="contact100-form-title">
                     ¿Requieres información? <br>
                     <small>Envianos un mensaje</small>
 				</span>
 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
-                    <input autocomplete="off" class="input100" type="text" name="name" placeholder="Nombre">
+                    <input name="nombre" [(ngModel)]="form.nombre" required autocomplete="off" class="input100" type="text" placeholder="Nombre">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 						<i class="fa fa-user" aria-hidden="true"></i>
 					</span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input autocomplete="off" class="input100" type="text" name="email" placeholder="Correo">
+                <div class="wrap-input100 validate-input">
+                    <input name="asunto" [(ngModel)]="form.asunto" autocomplete="off" class="input100" type="text" placeholder="Asunto">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 						<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -39,12 +39,12 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Message is required">
-                    <textarea autocomplete="off" class="input100" name="message" placeholder="Mensaje"></textarea>
+                    <textarea name="mensaje" [(ngModel)]="form.mensaje" autocomplete="off" class="input100" placeholder="Mensaje"></textarea>
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
+                    <button type="submit" class="contact100-form-btn">
 						Enviar
 					</button>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="col-4">
                         <h5 class="text-center">
                             <span class="badge badge-pill badge-dark p-3">
-                                <i class="fa fa-mail-bulk mr-2" aria-hidden="true"></i>hola@dritdi.mx
+                                <i class="fa fa-mail-bulk mr-2" aria-hidden="true"></i>gamemaster@dritdi.mx
                             </span>
                         </h5>
                     </div>

@@ -1,7 +1,7 @@
 <div class="wrapper bg-img">
     <nav id="sidebar" class="bg-blue" [ngClass]="{'active': utilidadesS.innerWidth < 800}">
         <div class="sidebar-header">
-            <img src="assets/img/logo con texto.png" alt="bootraper logo" class="app-logo" />
+            <img src="assets/img/logomx.png" alt="bootraper logo" class="app-logo" />
         </div>
         <ul class="list-unstyled components text-secondary">
             <li class="li-sidebar">
@@ -78,5 +78,32 @@
         <div>
             <router-outlet></router-outlet>
         </div>
+        <footer>
+
+            <div class="sticky-container">
+                <ul class="sticky">
+                    <li (click)="socialBar('https://www.facebook.com/AppDritdi')">
+                        <img src="assets/img/fb.png" width="32" height="32">
+                        <p><a>Siguenos en<br>Facebook</a></p>
+                    </li>
+                    <li (click)="socialBar('https://www.twitter.com/AppDritdi')">
+                        <img src="assets/img/tw.png" width="32" height="32">
+                        <p><a>Siguenos en<br>Twitter</a></p>
+                    </li>
+                    <li (click)="socialBar('https://www.instagram.com/AppDritdi')">
+                        <img src="assets/img/insta.png" width="32" height="32">
+                        <p><a target="_blank">Siguenos en<br>Instagram</a></p>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="row justify-align-center text-center py-2">
+                <div class="col-12">
+                    <a class="text-white" [routerLink]="['/aviso-privacidad']">Aviso de privacidad y confidencialidad</a>
+                </div>
+            </div>
+        </footer>
     </div>
+
 </div>

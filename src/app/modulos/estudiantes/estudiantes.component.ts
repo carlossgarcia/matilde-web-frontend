@@ -14,6 +14,10 @@ export class EstudiantesComponent implements OnInit {
   ngOnInit(): void {
     this.OpenSideBar();
   }
+  
+  socialBar(url){
+    window.open(url, '_blank');
+  }
 
   OpenSideBar(): void {
     $('#sidebarCollapse').on('click', () => {

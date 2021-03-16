@@ -10,6 +10,7 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { TemarioComponent } from './pages/temario/temario.component';
 import { AuthGuard } from '../../guards/auth.guard';
+import { AvisoPrivacidadComponent } from '../../pages/aviso-privacidad/aviso-privacidad.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,10 @@ const routes: Routes = [
       {
         path: 'temario',
         component: TemarioComponent
+      },
+      {
+        path: 'aviso-privacidad',
+        component: AvisoPrivacidadComponent
       },
       { path: '', redirectTo: '/estudiantes/home', pathMatch: 'full' },
     ]
