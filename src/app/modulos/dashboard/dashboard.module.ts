@@ -11,18 +11,26 @@ import { AllComponent } from './pages/usuarios/steps/all/all.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
-
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
-  declarations: [DashboardComponent, HomeComponent, InstitucionesComponent, UsuariosComponent, LicenciasComponent, RolesComponent, AllComponent],
+  declarations: [
+    DashboardComponent,
+    HomeComponent,
+    InstitucionesComponent,
+    UsuariosComponent,
+    LicenciasComponent,
+    RolesComponent,
+    AllComponent,
+  ],
   imports: [
     CommonModule,
     DashboardRouting,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    InfiniteScrollModule
-  ]
+    InfiniteScrollModule,
+    NgApexchartsModule,
+  ],
 })
-export class DashboardModule { }
+export class DashboardModule {}
